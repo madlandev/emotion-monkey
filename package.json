@@ -1,6 +1,6 @@
 {
   "name": "emotion-monkey",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "",
   "keywords": [],
   "module": "dist/emotion-monkey.es5.js",
