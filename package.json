@@ -1,0 +1,80 @@
+{
+  "name": "emotion-monkey",
+  "version": "0.0.0",
+  "description": "",
+  "keywords": [],
+  "module": "dist/emotion-monkey.es5.js",
+  "typings": "dist/types/emotion-monkey.d.ts",
+  "files": [
+    "dist"
+  ],
+  "author": "m1kak <mikayilg@madlan.co.il>",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "scripts": {
+    "lint": "tslint -t codeFrame 'src/**/*.ts' 'test/**/*.ts'",
+    "prebuild": "rimraf dist",
+    "build": "tsc --module commonjs && rollup -c rollup.config.ts",
+    "start": "rollup -c rollup.config.ts -w",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "{src,test}/**/*.ts": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    },
+    "validate-commit-msg": {
+      "types": "conventional-commit-types",
+      "helpMessage": "Use \"npm run commit\" instead, we use conventional-changelog format :) (https://github.com/commitizen/cz-cli)"
+    }
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  },
+  "peerDependencies": {
+    "create-emotion": "^9.2.6",
+    "react": "^16.4.2"
+  },
+  "devDependencies": {
+    "@types/node": "^10.0.3",
+    "@types/react": "^16.4.10",
+    "colors": "^1.1.2",
+    "commitizen": "^2.9.6",
+    "create-emotion": "^9.2.6",
+    "cross-env": "^5.0.1",
+    "husky": "^0.14.0",
+    "lint-staged": "^7.1.3",
+    "lodash.camelcase": "^4.3.0",
+    "prettier": "^1.13.4",
+    "prompt": "^1.0.0",
+    "react": "^16.4.2",
+    "replace-in-file": "^3.0.0-beta.2",
+    "rimraf": "^2.6.1",
+    "rollup": "^0.59.2",
+    "rollup-plugin-commonjs": "^9.0.0",
+    "rollup-plugin-json": "^3.0.0",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-sourcemaps": "^0.4.2",
+    "rollup-plugin-typescript2": "^0.11.1",
+    "ts-node": "^6.0.0",
+    "tslint": "^5.8.0",
+    "tslint-config-prettier": "^1.1.0",
+    "tslint-config-standard": "^7.0.0",
+    "tslint-eslint-rules": "^5.3.1",
+    "tslint-react": "^3.6.0",
+    "typescript": "^2.6.2",
+    "utility-types": "^2.0.0"
+  }
+}
