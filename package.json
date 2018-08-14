@@ -1,11 +1,11 @@
 {
   "name": "emotion-monkey",
-  "version": "0.1.0",
+  "version": "0.1.4",
   "description": "",
   "keywords": [],
   "module": "dist/emotion-monkey.es5.js",
   "main": "dist/emotion-monkey.umd.js",
-  "typings": "dist/types/emotion-monkey.d.ts",
+  "typings": "dist/types/index.d.ts",
   "files": [
     "dist"
   ],
@@ -75,7 +75,6 @@
     "tslint-config-standard": "^7.0.0",
     "tslint-eslint-rules": "^5.3.1",
     "tslint-react": "^3.6.0",
-    "typescript": "^2.6.2",
-    "utility-types": "^2.0.0"
+    "typescript": "^2.6.2"
   }
 }
