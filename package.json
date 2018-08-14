@@ -1,7 +1,7 @@
 {
   "name": "@madlan145/emotion-monkey",
   "version": "0.2.0",
-  "description": "",
+  "description": "Manage emotion instances with React contexts mechanism.",
   "keywords": [],
   "module": "dist/emotion-monkey.es5.js",
   "main": "dist/emotion-monkey.umd.js",
