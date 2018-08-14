@@ -4,6 +4,7 @@
   "description": "",
   "keywords": [],
   "module": "dist/emotion-monkey.es5.js",
+  "main": "dist/emotion-monkey.umd.js",
   "typings": "dist/types/emotion-monkey.d.ts",
   "files": [
     "dist"
