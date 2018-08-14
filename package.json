@@ -48,6 +48,9 @@
     "create-emotion": "^9.2.6",
     "react": "^16.4.2"
   },
+  "dependencies": {
+    "utility-types": "^2.0.0"
+  },
   "devDependencies": {
     "@types/node": "^10.0.3",
     "@types/react": "^16.4.10",
@@ -75,7 +78,6 @@
     "tslint-config-standard": "^7.0.0",
     "tslint-eslint-rules": "^5.3.1",
     "tslint-react": "^3.6.0",
-    "typescript": "^2.6.2",
-    "utility-types": "^2.0.0"
+    "typescript": "^2.6.2"
   }
 }
