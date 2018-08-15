@@ -12,7 +12,7 @@
   "author": "m1kak <mikayilg@madlan.co.il>",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git+https://github.com/madlandev/emotion-monkey.git"
   },
   "license": "MIT",
   "engines": {
@@ -31,22 +31,13 @@
       "git add"
     ]
   },
-  "config": {
-    "commitizen": {
-      "path": "node_modules/cz-conventional-changelog"
-    },
-    "validate-commit-msg": {
-      "types": "conventional-commit-types",
-      "helpMessage": "Use \"npm run commit\" instead, we use conventional-changelog format :) (https://github.com/commitizen/cz-cli)"
-    }
-  },
   "prettier": {
     "semi": false,
     "singleQuote": true
   },
   "peerDependencies": {
-    "create-emotion": "^9.2.6",
-    "react": "^16.4.2"
+    "create-emotion": ">= 9.0.0",
+    "react": ">= 16.3.0"
   },
   "devDependencies": {
     "@types/node": "^10.0.3",
