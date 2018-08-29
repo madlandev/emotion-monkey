@@ -12,7 +12,7 @@ import {
   Themed
 } from './common'
 
-interface StyledComponentMethods<
+export interface StyledComponentMethods<
   Props extends object,
   InnerProps extends object,
   Theme extends object
@@ -33,7 +33,7 @@ interface StyledComponentMethods<
   ): StyledOtherComponent<Props, IP, Theme>
 }
 
-interface StyledStatelessComponent<
+export interface StyledStatelessComponent<
   Props extends object,
   InnerProps extends object,
   Theme extends object
@@ -42,7 +42,7 @@ interface StyledStatelessComponent<
     ClassInterpolation,
     StyledComponentMethods<Props, InnerProps, Theme> {}
 
-interface StyledOtherComponent<
+export interface StyledOtherComponent<
   Props extends object,
   InnerProps extends object,
   Theme extends object
@@ -51,25 +51,29 @@ interface StyledOtherComponent<
     ClassInterpolation,
     StyledComponentMethods<Props, InnerProps, Theme> {}
 
-type StyledComponent<Props extends object, InnerProps extends object, Theme extends object> =
+export type StyledComponent<
+  Props extends object,
+  InnerProps extends object,
+  Theme extends object
+> =
   | StyledStatelessComponent<Props, InnerProps, Theme>
   | StyledOtherComponent<Props, InnerProps, Theme>
 
-type CreateStyledStatelessComponent<InnerProps extends object, Theme extends object> = <
+export type CreateStyledStatelessComponent<InnerProps extends object, Theme extends object> = <
   Props extends object,
   OverridedTheme extends object = Theme
 >(
   ...args: Array<Interpolation<Themed<Props, OverridedTheme>>>
 ) => StyledStatelessComponent<Props, InnerProps, OverridedTheme>
 
-type CreateStyledOtherComponent<InnerProps extends object, Theme extends object> = <
+export type CreateStyledOtherComponent<InnerProps extends object, Theme extends object> = <
   Props extends object,
   OverridedTheme extends object = Theme
 >(
   ...args: Array<Interpolation<Themed<Props, OverridedTheme>>>
 ) => StyledOtherComponent<Props, InnerProps, OverridedTheme>
 
-interface CreateStyledFunction<Theme extends object> {
+export interface CreateStyledFunction<Theme extends object> {
   <T extends keyof JSX.IntrinsicElements>(
     tag: T,
     options?: StyledOptions
@@ -86,7 +90,7 @@ interface CreateStyledFunction<Theme extends object> {
   ): CreateStyledOtherComponent<IP, Theme>
 }
 
-type CreateStyledShorthands<Theme extends object> = {
+export type CreateStyledShorthands<Theme extends object> = {
   [T in keyof JSX.IntrinsicElements]: CreateStyledOtherComponent<JSX.IntrinsicElements[T], Theme>
 }
 
